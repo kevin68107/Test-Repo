@@ -40,13 +40,17 @@ body{
     height: 450px;
 }
 
+/* .nav .nav-top-right img{
+
+} */
+
 .nav-top-right button{
     float: right;
     background: var(--button-1);
 }
 .nav .nav-top-left{
     background: #F02AA6;
-    width: 35%;
+    width: 350px;
     height: 450px;
     margin: 5px;
     padding: 10px;
@@ -152,4 +156,19 @@ footer button{
     margin-right: 50px;
     padding-right: 20px;
     background: var(--gradient-2);
+}
+
+@media screen and(max-width:480px) {
+    .container{
+        margin: 480px 0;
+        height: 100%;
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and(max-width:768px) {
+    .container{
+        width: 90%;
+        padding: 10px 35px 40px 35px;
+    }
 }
