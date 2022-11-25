@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 :root{
     --main-color: #f2f2f2;
     --button-1: #13183F;
@@ -10,7 +10,8 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Plus Jarkata Sans', sans-serif ;
+    text-decoration: none;
     list-style-type: none;
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -18,12 +19,16 @@
 
 body{
     margin: 0px;
+    overflow-x: hidden;
 }
 
 .container{
-    height: 600px;
     width: 1110px;
     margin: 40px auto;
+}
+
+header{
+    margin-bottom: 150px;
 }
 
 header button{
@@ -32,12 +37,10 @@ header button{
 }
 
 .nav{
-    width: 100%;
-    height: 700px;
     display: flex;
-    /* align-items: center; */
+    position: relative;
     justify-content: space-evenly;
-    margin-bottom: 5px;
+    margin-bottom: 50px;
 }
 
 .nav .nav-top-right{
@@ -55,7 +58,7 @@ picture{
     flex-direction: row;
 }
 
-.nav-top-left{
+.nav .nav-top-left{
     background: #F02AA6;
     width: 457px;
     height: 350px;
@@ -70,19 +73,15 @@ picture{
 
 }
 
-.nav-top-left h1{
-    font: Plus Jakarta Sans;
-    font-style: normal;
+.nav .nav-top-left h1{
     color: #13183F;
-    width: 457px;
-    height: 143px;
     position: absolute;
     font-weight: 800;
     font-size: 56px;
-    line-height: 70px;
+    line-height: 71px;
 }
 
-.nav-top-left p{
+.nav .nav-top-left p{
     width: 445px;
     height: 84px;
     top: 172px;
@@ -93,7 +92,7 @@ picture{
     size: 18px;
     line-height: 28px;
 }
-.nav-top-left button{
+.nav .nav-top-left button{
     position: absolute;
     background: var(--gradient-1);
 }
@@ -142,23 +141,28 @@ button:active, button:focus{
     background: var(--gradient-1);
 }
 
-footer{
-    height: 50px;
-    width: 1120px;
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: space-between;
+.footer{
+    height: 90px;
+    width: 100%;
     background-color: #13183F;
 }
 
-footer img{
+.footer .footer-content{
+    width: 1110px;
+    margin: 0 auto;
+    padding: 25px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer img{
     margin-left: 10px;
     padding-left: 20px;
     font-size: 0.5rem;
 }
 
-footer button{
+.footer button{
     margin-right: 50px;
     padding-right: 20px;
     background: var(--gradient-2);
