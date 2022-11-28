@@ -215,7 +215,7 @@ button:active, button:focus{
 @media (max-width:768px) {
     body{
         margin: 0px;
-        overflow-x: hidden;
+        overflow-x: clip;
     }
     
     .container{
@@ -225,12 +225,12 @@ button:active, button:focus{
     }
     
     header{
-        margin-bottom: 130px;
+        margin-bottom: 100px;
     }
     
     header button{
         float: right;
-        margin-right: 110px;
+        margin-right: 50px;
         background: var(--button-1);
     }
     
@@ -244,19 +244,13 @@ button:active, button:focus{
         margin-bottom: 100px;
     }
     
-    .nav .nav-top-right{
-        width: 400px;
-        height: 450px;
-        display: flex;
-    }
-    
     picture{
-        height: 800px;
-        width: 891px;
+        height: 640px;
+        width: 640.71px;
         display: flex;
         position: absolute;
-        top: -320px;
-        right: -370px;
+        top: -199.13px;
+        left: 400px;
     }
     .nav-top-left{
         display: flex;
@@ -267,19 +261,19 @@ button:active, button:focus{
         color: #13183F;
         position: absolute;
         font-weight: 800;
-        font-size: 56px;
-        line-height: 71px;
+        font-size: 40px;
+        line-height: 50px;
     }
     
     .nav .nav-top-left p{
-        width: 445px;
-        height: 84px;
-        top: 172px;
+        width: 398px;
+        height: 78px;
+        top: 126px;
         position: absolute;
         color: #83869A;
         font-weight: 500;
-        size: 18px;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 26px;
     }
     .btn-2{
         top: 260px;
@@ -378,16 +372,16 @@ button:active, button:focus{
     }
     
     .footer{
-        height: 90px;
-        width: 100%;
+        height: 120px;
+        width: 768px;
         background-color: #13183F;
     }
     
     .footer .footer-content{
-        width: 1110px;
+        width: 689px;
+        height: 48px;
         margin: 0 auto;
-        padding: 25px 0px;
-        display: flex;
+        padding: 55px 0px;
         align-items: center;
         justify-content: space-between;
     }
