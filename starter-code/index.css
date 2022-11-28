@@ -33,14 +33,18 @@ header{
 
 header button{
     float: right;
+    margin-right: 50px;
     background: var(--button-1);
+}
+
+header button:hover{
+    background: #666ca3;
 }
 
 .nav{
     display: flex;
     position: relative;
-    justify-content: space-evenly;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .nav .nav-top-right{
@@ -50,27 +54,16 @@ header button{
 }
 
 picture{
-    height: 100%;
-    border-color: #F02AA6;
+    height: 800px;
+    width: 891px;
     display: flex;
-
-    float: left;
-    flex-direction: row;
+    position: absolute;
+    top: -320px;
+    right: -370px;
 }
-
-.nav .nav-top-left{
-    background: #F02AA6;
-    width: 457px;
-    height: 350px;
-    left: 165px;
-    top: 252px;
-    padding: 0 5px;
+.nav-top-left{
     display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* position: absolute; */
-
+    height: 450px;
 }
 
 .nav .nav-top-left h1{
@@ -87,18 +80,22 @@ picture{
     top: 172px;
     position: absolute;
     color: #83869A;
-    font: Plus Jakarta Sans;
     font-weight: 500;
     size: 18px;
     line-height: 28px;
 }
-.nav .nav-top-left button{
+.btn-2{
+    top: 260px;
     position: absolute;
     background: var(--gradient-1);
 }
 
+.btn-2:hover{
+    background: var(--gradient-1-hover);
+}
+
 button{
-    padding: 5px 20px;
+    padding: 10px 30px;
     border: none;
     color: #fff;
     align-items: center;
@@ -113,32 +110,74 @@ button:active, button:focus{
 }
 
 .main{
-    width: 100%;
-    height: 780px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
+    justify-content: center;
 }
 
 .cardholder{
     width: 100%;
     display: grid;
-    grid-gap: 5px;
+    grid-gap: 10px;
     grid-template-columns: auto auto auto;
     
 }
 .cards{
-    width: 90%;
+    width: 85%;
     height: 300PX;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: 15px;
     padding: 10PX;
     border-radius: 5%;
     box-shadow: 0px 5px 15px -10px #000;
 }
 
-.cards .first{
+.first{
+    color: #ffffff;
     background: var(--gradient-1);
+}
+
+.first .first-p{
+    color: #fff;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.top{
+    margin-bottom: 30px;
+}
+
+.cards .icon{
+    position: absolute;
+    top: -15px;
+    left: 20px;
+
+}
+
+.cards h2{
+    color: #13183F;
+    position: inherit;
+    left: -75px;
+}
+
+.cards p{
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #83869a;
+}
+
+.cards a{
+    color: #f74780;
+}
+
+.cards a:hover{
+    color: #ffa7c3;
 }
 
 .footer{
@@ -168,17 +207,404 @@ button:active, button:focus{
     background: var(--gradient-2);
 }
 
-@media screen and(max-width:480px) {
+.footer button:hover{
+    background: var(--gradient-2-hover);
+}
+
+/* Tablet view */
+@media (max-width:768px) {
+    body{
+        margin: 0px;
+        overflow-x: hidden;
+    }
+    
     .container{
-        margin: 480px 0;
-        height: 100%;
-        flex-direction: column-reverse;
+        width: 768px;
+        height: 1760px;
+        margin: 30px auto;
+    }
+    
+    header{
+        margin-bottom: 130px;
+    }
+    
+    header button{
+        float: right;
+        margin-right: 110px;
+        background: var(--button-1);
+    }
+    
+    header button:hover{
+        background: #666ca3;
+    }
+    
+    .nav{
+        display: flex;
+        position: relative;
+        margin-bottom: 100px;
+    }
+    
+    .nav .nav-top-right{
+        width: 400px;
+        height: 450px;
+        display: flex;
+    }
+    
+    picture{
+        height: 800px;
+        width: 891px;
+        display: flex;
+        position: absolute;
+        top: -320px;
+        right: -370px;
+    }
+    .nav-top-left{
+        display: flex;
+        height: 450px;
+    }
+    
+    .nav .nav-top-left h1{
+        color: #13183F;
+        position: absolute;
+        font-weight: 800;
+        font-size: 56px;
+        line-height: 71px;
+    }
+    
+    .nav .nav-top-left p{
+        width: 445px;
+        height: 84px;
+        top: 172px;
+        position: absolute;
+        color: #83869A;
+        font-weight: 500;
+        size: 18px;
+        line-height: 28px;
+    }
+    .btn-2{
+        top: 260px;
+        position: absolute;
+        background: var(--gradient-1);
+    }
+    
+    .btn-2:hover{
+        background: var(--gradient-1-hover);
+    }
+    
+    button{
+        padding: 10px 30px;
+        border: none;
+        color: #fff;
+        align-items: center;
+        display: inline-block;
+        font-size: 0.8rem;
+        border-radius: 100px;
+        white-space: nowrap;
+    }
+    
+    button:active, button:focus{
+        outline: none;
+    }
+    
+    .main{
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+    
+    .cardholder{
+        width: 100%;
+        display: grid;
+        grid-gap: 8px;
+        grid-template-columns: auto auto ;
+        
+    }
+    .cards{
+        width: 85%;
+        height: 300PX;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 15px;
+        padding: 10PX;
+        border-radius: 5%;
+        box-shadow: 0px 5px 15px -10px #000;
+    }
+    
+    .first{
+        color: #ffffff;
+        background: var(--gradient-1);
+    }
+    
+    .first .first-p{
+        color: #fff;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 40px;
+    }
+    
+    .top{
+        margin-bottom: 30px;
+    }
+    
+    .cards .icon{
+        position: absolute;
+        top: -15px;
+        left: 20px;
+    
+    }
+    
+    .cards h2{
+        color: #13183F;
+        position: inherit;
+        left: -75px;
+    }
+    
+    .cards p{
+        font-style: normal;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 28px;
+        color: #83869a;
+    }
+    
+    .cards a{
+        color: #f74780;
+    }
+    
+    .cards a:hover{
+        color: #ffa7c3;
+    }
+    
+    .footer{
+        height: 90px;
+        width: 100%;
+        background-color: #13183F;
+    }
+    
+    .footer .footer-content{
+        width: 1110px;
+        margin: 0 auto;
+        padding: 25px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .footer img{
+        margin-left: 10px;
+        padding-left: 20px;
+        font-size: 0.5rem;
+    }
+    
+    .footer button{
+        margin-right: 50px;
+        padding-right: 20px;
+        background: var(--gradient-2);
+    }
+    
+    .footer button:hover{
+        background: var(--gradient-2-hover);
     }
 }
 
-@media screen and(max-width:768px) {
+/* Mobile view */
+@media (max-width:480px) {
+
+    body{
+        display: block;
+        overflow-x: hidden;
+    }
     .container{
-        width: 90%;
-        padding: 10px 35px 40px 35px;
+        width: 480px;
+        margin: 20px auto;
+        /* display: block; */
+        /* position: relative; */
+        /* flex-direction: column-reverse; */
+    }
+    
+    header{
+        position: absolute;
+        width: 343px;
+        height: 48px;
+        left: 48px;
+        top: 16px;
+        bottom: 25px;
+    }
+    
+    header button{
+        float: right;
+        background: var(--button-1);
+    }
+    
+    .nav{
+        position: absolute;
+        top: 102px;
+        margin-bottom: 25px;
+    }
+    
+    .nav .nav-top-right{
+        width: 340px;
+        height: 230px;
+        display: flex;
+    }
+    
+    picture{
+        height: 301px;
+        width: 327px;
+        position: absolute;
+        top: 433px;
+        left: -20px;
+    }
+    .nav-top-left{
+        width: 343px;
+        height: 101px;
+    }
+    
+    .nav .nav-top-left h1{
+        color: #13183F;
+        position: absolute;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 50px;
+    }
+    
+    .nav .nav-top-left p{
+        width: 343px;
+        height: 78px;
+        top: 120px;
+        position: absolute;
+        color: #83869A;
+        font-weight: 500;
+        size: 16px;
+        line-height: 26px;
+    }
+    .btn-2{
+        top: 230px;
+        position: absolute;
+        background: var(--gradient-1);
+    }
+    
+    button{
+        padding: 10px 30px;
+        border: none;
+        color: #fff;
+        align-items: center;
+        display: inline-block;
+        font-size: 0.8rem;
+        border-radius: 100px;
+        white-space: nowrap;
+    }
+    
+    button:active, button:focus{
+        outline: none;
+    }
+    
+    .main{
+        position: absolute;
+        margin-bottom: 40px;
+    }
+    
+    .cardholder{
+        width: 378px;
+        height: 1695px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 800px;
+        
+    }
+    .first .mobile{
+        width: 343px;
+        height: 120px;
+        position: absolute;
+        left: 16px;
+        /* justify-content: center; */
+        /* align-items: center; */
+        border-radius: 5%;
+        box-shadow: 0px 5px 15px -10px #000;
+    }
+    .cards{
+        width: 343px;
+        height: 283px;
+        position: absolute;
+        left: 16px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5%;
+        box-shadow: 0px 5px 15px -10px #000;
+    }
+    
+    .first{
+        color: #ffffff;
+        background: var(--gradient-1);
+    }
+    
+    .first .first-p{
+        color: #fff;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .top{
+        margin-bottom: 30px;
+    }
+    
+    .cards .icon{
+        position: absolute;
+        top: -15px;
+    
+    }
+    
+    .cards h2{
+        color: #13183F;
+        position: inherit;
+        font-size: 20px;
+        line-height: 25px;
+        left: -75px;
+    }
+
+    .cards p{
+        font-style: normal;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25px;
+        color: #83869a;
+    }
+    
+    .cards a{
+        color: #f74780;
+    }
+    
+    .footer{
+        position: absolute;
+        height: 120px;
+        width: 375px;
+        top: 2495px;
+        background-color: #13183F;
+    }
+    
+    .footer .footer-content{
+        position: absolute;
+        width: 343px;
+        margin: 5px auto;
+        padding: 35px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .footer img{
+        margin-left: 5px;
+        padding-left: 10px;
+        font-size: 0.5rem;
+    }
+    
+    .footer button{
+        margin-right: 10px;
+        padding-right: 25px;
+        background: var(--gradient-2);
     }
 }
