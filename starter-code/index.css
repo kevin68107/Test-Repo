@@ -212,16 +212,16 @@ button:active, button:focus{
 }
 
 /* Tablet view */
-@media (max-width:768px) {
+@media screen and (max-width:768px) {
     body{
         margin: 0px;
-        overflow-x: clip;
+        overflow-x: hidden;
     }
     
     .container{
         width: 768px;
         height: 1760px;
-        margin: 30px auto;
+        /* margin: 30px auto; */
     }
     
     header{
@@ -301,6 +301,8 @@ button:active, button:focus{
     }
     
     .main{
+        width: 768px;
+        position: absolute;
         margin-bottom: 30px;
         justify-content: center;
     }
@@ -380,6 +382,7 @@ button:active, button:focus{
     .footer .footer-content{
         width: 689px;
         height: 48px;
+        top: 1676px;
         margin: 0 auto;
         padding: 55px 0px;
         align-items: center;
@@ -404,16 +407,16 @@ button:active, button:focus{
 }
 
 /* Mobile view */
-@media (max-width:480px) {
+@media screen and (max-width:480px) {
 
     body{
-        display: block;
+        /* display: block; */
         overflow-x: hidden;
     }
     .container{
         width: 480px;
-        margin: 20px auto;
-        /* display: block; */
+        /* margin: 20px auto; */
+        display: block;
         /* position: relative; */
         /* flex-direction: column-reverse; */
     }
@@ -522,7 +525,6 @@ button:active, button:focus{
     .cards{
         width: 343px;
         height: 283px;
-        position: absolute;
         left: 16px;
         justify-content: center;
         align-items: center;
@@ -542,9 +544,9 @@ button:active, button:focus{
         line-height: 32px;
     }
     
-    .top{
+    /* .top{
         margin-bottom: 30px;
-    }
+    } */
     
     .cards .icon{
         position: absolute;
@@ -581,10 +583,9 @@ button:active, button:focus{
     }
     
     .footer .footer-content{
-        position: absolute;
         width: 343px;
-        margin: 5px auto;
         padding: 35px 0px;
+        margin: 30px auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
