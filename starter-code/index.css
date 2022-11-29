@@ -408,17 +408,16 @@ button:active, button:focus{
 
 /* Mobile view */
 @media screen and (max-width:480px) {
-
+    html{
+        overflow-x: hidden;
+    }
     body{
-        /* display: block; */
         overflow-x: hidden;
     }
     .container{
+        overflow-x: hidden;
         width: 480px;
-        /* margin: 20px auto; */
-        display: block;
-        /* position: relative; */
-        /* flex-direction: column-reverse; */
+        margin: 20px;
     }
     
     header{
@@ -500,7 +499,6 @@ button:active, button:focus{
     
     .main{
         position: absolute;
-        margin-bottom: 40px;
     }
     
     .cardholder{
@@ -512,16 +510,7 @@ button:active, button:focus{
         top: 800px;
         
     }
-    .first .mobile{
-        width: 343px;
-        height: 120px;
-        position: absolute;
-        left: 16px;
-        /* justify-content: center; */
-        /* align-items: center; */
-        border-radius: 5%;
-        box-shadow: 0px 5px 15px -10px #000;
-    }
+    
     .cards{
         width: 343px;
         height: 283px;
@@ -533,6 +522,7 @@ button:active, button:focus{
     }
     
     .first{
+        height: 100px;
         color: #ffffff;
         background: var(--gradient-1);
     }
@@ -543,10 +533,6 @@ button:active, button:focus{
         font-size: 24px;
         line-height: 32px;
     }
-    
-    /* .top{
-        margin-bottom: 30px;
-    } */
     
     .cards .icon{
         position: absolute;
@@ -577,7 +563,8 @@ button:active, button:focus{
     .footer{
         position: absolute;
         height: 120px;
-        width: 375px;
+        width: 480px;
+        margin-top: 50px;
         top: 2495px;
         background-color: #13183F;
     }
