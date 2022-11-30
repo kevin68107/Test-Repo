@@ -14,19 +14,16 @@
     text-decoration: none;
     list-style-type: none;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 body{
-    /* margin: 0; */
-    /*  overflow-x: hidden; */
+     overflow-x: hidden;
 }
 
 .container{
     width: 1110px;
     margin: 30px auto;
     /* padding-left: 20px; */
-    overflow-X: hidden;
 }
 
 header{
@@ -59,9 +56,10 @@ picture{
     height: 690px;
     width: 891px;
     display: flex;
+    overflow-x: hidden;
     position: absolute;
-    top: -310px;
-    right: -370px;
+    top: -285px;
+    right: -440px;
 }
 .nav-top-left{
     display: flex;
@@ -164,6 +162,7 @@ button:active, button:focus{
     color: #13183F;
     position: inherit;
     left: -75px;
+    top: -20px;
 }
 
 .cards p{
@@ -172,10 +171,13 @@ button:active, button:focus{
     font-weight: 300;
     line-height: 28px;
     color: #83869a;
+    margin: 5px 5px;
 }
 
 .cards a{
     color: #f74780;
+    margin-top: 10px;
+    margin-right: 150px;
 }
 
 .cards a:hover{
@@ -216,18 +218,18 @@ button:active, button:focus{
 /* Tablet view */
 @media screen and (max-width:768px) {
     body{
+        margin: 0;
         overflow-x: hidden;
     }
     
     .container{
         width: 768px;
         height: 1760px;
-        overflow: hidden;
-        padding-left: 20px;
-        /* margin: 30px auto; */
+        overflow-x: hidden;
     }
     
     header{
+        margin-left: 15px;
         margin-bottom: 100px;
     }
     
@@ -258,6 +260,7 @@ button:active, button:focus{
     .nav-top-left{
         display: flex;
         height: 450px;
+        margin-left: 15px;
     }
     
     .nav .nav-top-left h1{
@@ -411,29 +414,28 @@ button:active, button:focus{
 
 /* Mobile view */
 @media screen and (max-width:480px) {
-    html{
-        overflow-x: hidden;
-    }
     body{
-       padding-left: 50px;
+        width: auto;
+        height: auto;
+       overflow-x: hidden;
     }
     .container{
         overflow-x: hidden;
         width: 480px;
-        margin: 20px;
     }
     
     header{
         position: absolute;
         width: 343px;
         height: 48px;
-        left: 48px;
+        left: 5px;
         top: 16px;
         bottom: 25px;
     }
     
     header button{
         float: right;
+        margin-right: 0;
         background: var(--button-1);
     }
     
@@ -454,8 +456,8 @@ button:active, button:focus{
         height: 301px;
         width: 327px;
         position: absolute;
-        top: 433px;
-        left: -20px;
+        top: 330px;
+        left: 50px;
     }
     .nav-top-left{
         width: 343px;
@@ -466,18 +468,18 @@ button:active, button:focus{
         color: #13183F;
         position: absolute;
         font-weight: 800;
-        font-size: 40px;
+        font-size: 37px;
         line-height: 50px;
     }
     
     .nav .nav-top-left p{
         width: 343px;
         height: 78px;
-        top: 120px;
+        top: 115px;
         position: absolute;
         color: #83869A;
         font-weight: 500;
-        size: 16px;
+        font-size: 18px;
         line-height: 26px;
     }
     .btn-2{
@@ -494,16 +496,7 @@ button:active, button:focus{
         display: inline-block;
         font-size: 0.8rem;
         border-radius: 100px;
-        white-space: nowrap;
     }
-    
-    button:active, button:focus{
-        outline: none;
-    }
-    
-    /* .main{
-        position: absolute;
-    } */
     
     .cardholder{
         width: 378px;
@@ -511,8 +504,7 @@ button:active, button:focus{
         position: absolute;
         display: flex;
         flex-direction: column;
-        top: 800px;
-        
+        top: 800px;   
     }
     
     .cards{
@@ -550,6 +542,7 @@ button:active, button:focus{
         font-size: 20px;
         line-height: 25px;
         left: -75px;
+        top: -20px;
     }
 
     .cards p{
@@ -583,8 +576,7 @@ button:active, button:focus{
     }
     
     .footer img{
-        margin-left: 5px;
-        padding-left: 10px;
+        margin-left: -50px;
         font-size: 0.5rem;
     }
     
