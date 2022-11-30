@@ -18,13 +18,15 @@
 }
 
 body{
-    margin: 0px;
-    overflow-x: hidden;
+    /* margin: 0; */
+    /*  overflow-x: hidden; */
 }
 
 .container{
     width: 1110px;
-    margin: 40px auto;
+    margin: 30px auto;
+    /* padding-left: 20px; */
+    overflow-X: hidden;
 }
 
 header{
@@ -33,7 +35,7 @@ header{
 
 header button{
     float: right;
-    margin-right: 50px;
+    margin-right: 150px;
     background: var(--button-1);
 }
 
@@ -187,7 +189,7 @@ button:active, button:focus{
 }
 
 .footer .footer-content{
-    width: 1110px;
+    width: 90%;
     margin: 0 auto;
     padding: 25px 0px;
     display: flex;
@@ -214,13 +216,14 @@ button:active, button:focus{
 /* Tablet view */
 @media screen and (max-width:768px) {
     body{
-        margin: 0px;
         overflow-x: hidden;
     }
     
     .container{
         width: 768px;
         height: 1760px;
+        overflow: hidden;
+        padding-left: 20px;
         /* margin: 30px auto; */
     }
     
@@ -412,7 +415,7 @@ button:active, button:focus{
         overflow-x: hidden;
     }
     body{
-        overflow-x: hidden;
+       padding-left: 50px;
     }
     .container{
         overflow-x: hidden;
@@ -441,6 +444,7 @@ button:active, button:focus{
     }
     
     .nav .nav-top-right{
+        position: absolute;
         width: 340px;
         height: 230px;
         display: flex;
@@ -497,9 +501,9 @@ button:active, button:focus{
         outline: none;
     }
     
-    .main{
+    /* .main{
         position: absolute;
-    }
+    } */
     
     .cardholder{
         width: 378px;
