@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 :root{
-    --main-color: #f2f2f2;
+    --main-color: linear-gradient(-0deg, #f2f2EE 20%, #fafafa65 100%);
     --button-1: #13183F;
     --gradient-1: linear-gradient(180deg, #ff6f48 0%, #F02AA6 100%);
     --gradient-1-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FF6F48 0%,#F02AA6 100%);
@@ -10,13 +10,14 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Plus Jarkata Sans', sans-serif ;
+    font-family: 'Plus Jakarta Sans', sans-serif ;
     text-decoration: none;
     list-style-type: none;
     box-sizing: border-box;
 }
 
 body{
+    background: var(--main-color);
      overflow-x: hidden;
 }
 
@@ -33,11 +34,11 @@ header{
 
 header button{
     float: right;
-    margin-right: 150px;
+    margin-right: 65px;
     background: var(--button-1);
 }
 
-header button:hover{
+.btn-1:hover{
     background: #666ca3;
 }
 
@@ -109,8 +110,9 @@ button{
 button:active, button:focus{
     outline: none;
 }
-
+starter-code/css/index.css
 .main{
+    position: relative;
     margin-bottom: 30px;
     justify-content: center;
 }
@@ -131,20 +133,20 @@ button:active, button:focus{
     align-items: center;
     flex-direction: column;
     margin: 15px;
-    padding: 10PX;
-    border-radius: 5%;
-    box-shadow: 0px 5px 15px -10px #000;
+    padding: 0px 10PX;
+    border-radius: 15px;
+    box-shadow: 0px 5px 12px -9px #000;
 }
 
 .first{
-    color: #ffffff;
     background: var(--gradient-1);
 }
 
 .first .first-p{
+    position: absolute;
     color: #fff;
     font-weight: 800;
-    font-size: 30px;
+    font-size: 32px;
     line-height: 40px;
 }
 
@@ -161,24 +163,25 @@ button:active, button:focus{
 
 .cards h2{
     color: #13183F;
-    position: inherit;
-    left: -75px;
-    top: -20px;
+    position: absolute;
+    left: 20px;
+    top: 55px;
 }
 
 .cards p{
-    font-style: normal;
+    color: #83869a;
+    position: absolute;
+    left: 20px;
     font-size: 18px;
     font-weight: 300;
     line-height: 28px;
-    color: #83869a;
-    margin: 5px 5px;
 }
 
 .cards a{
+    position: absolute;
     color: #f74780;
-    margin-top: 10px;
-    margin-right: 150px;
+    left: 20px;
+    top: 250px;
 }
 
 .cards a:hover{
@@ -308,8 +311,7 @@ button:active, button:focus{
     }
     
     .main{
-        width: 768px;
-        position: absolute;
+        position: relative;
         margin-bottom: 30px;
         justify-content: center;
     }
@@ -330,9 +332,9 @@ button:active, button:focus{
         align-items: center;
         flex-direction: column;
         margin: 15px;
-        padding: 10PX;
-        border-radius: 5%;
-        box-shadow: 0px 5px 15px -10px #000;
+        padding: 0px 10PX;
+        border-radius: 15px;
+        box-shadow: 0px 5px 12px -9px #000;
     }
     
     .first{
@@ -360,16 +362,16 @@ button:active, button:focus{
     
     .cards h2{
         color: #13183F;
-        position: inherit;
-        left: -75px;
+        position: absolute;
+        left: 20px;
     }
     
     .cards p{
-        font-style: normal;
+        color: #83869a;
+        position: absolute;
         font-size: 18px;
         font-weight: 300;
         line-height: 28px;
-        color: #83869a;
     }
     
     .cards a{
@@ -416,8 +418,6 @@ button:active, button:focus{
 /* Mobile view */
 @media screen and (max-width:480px) {
     body{
-        width: auto;
-        height: auto;
        overflow-x: hidden;
     }
     .container{
@@ -499,6 +499,12 @@ button:active, button:focus{
         border-radius: 100px;
     }
     
+    .main{
+        position: relative;
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+
     .cardholder{
         width: 378px;
         height: 1695px;
@@ -510,12 +516,12 @@ button:active, button:focus{
     
     .cards{
         width: 343px;
-        height: 283px;
+        /* height: 283px; */
         left: 16px;
         justify-content: center;
         align-items: center;
         border-radius: 5%;
-        box-shadow: 0px 5px 15px -10px #000;
+        box-shadow: 0px 5px 12px -9px #000;
     }
     
     .first{
@@ -539,11 +545,11 @@ button:active, button:focus{
     
     .cards h2{
         color: #13183F;
-        position: inherit;
+        position: absolute;
+        left: 20px;
         font-size: 20px;
         line-height: 25px;
-        left: -75px;
-        top: -20px;
+        top: 50px;
     }
 
     .cards p{
@@ -555,7 +561,10 @@ button:active, button:focus{
     }
     
     .cards a{
+        position: absolute;
         color: #f74780;
+        top: 200px;
+        left: 20px;
     }
     
     .footer{
@@ -582,7 +591,7 @@ button:active, button:focus{
     }
     
     .footer button{
-        margin-right: 10px;
+        margin-right: 30px;
         padding-right: 25px;
         background: var(--gradient-2);
     }
