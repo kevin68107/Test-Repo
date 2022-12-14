@@ -1,4 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+*, 
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif ;
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
 :root{
     --main-color: linear-gradient(-0deg, #f2f2EE 20%, #fafafa65 100%);
     --button-1: #13183F;
@@ -7,84 +20,82 @@
     --gradient-2: linear-gradient(180deg, #4851FF 0%, #F02AA6 100%);
     --gradient-2-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
 }
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Plus Jakarta Sans', sans-serif ;
-    text-decoration: none;
-    list-style-type: none;
-    box-sizing: border-box;
-}
 
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: var(--main-color);
      overflow-x: hidden;
 }
 
 .container{
-    width: 1110px;
-    margin: 30px auto;
+    width: 83vw;
+    margin: 1.8rem auto;
     /* padding-left: 20px; */
     
 }
 
 header{
-    margin-bottom: 150px;
+    margin-bottom: 9.3rem;
 }
 
-header button{
-    float: right;
-    margin-right: 65px;
+.btn-1{
+    position: absolute;
+    right: 9.8rem;
     background: var(--button-1);
+    z-index: 1;
 }
 
 .btn-1:hover{
     background: #666ca3;
+    z-index: 20;
 }
 
 .nav{
     display: flex;
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 6.2rem;
 }
 
 .nav .nav-top-right{
-    width: 400px;
-    height: 450px;
+    width: 25rem;
+    height: 28.1rem;
     display: flex;
+    position: absolute;
 }
 
 picture{
-    height: 690px;
-    width: 891px;
+    height: 43.1rem;
+    width: 55.6rem;
     display: flex;
     overflow-x: hidden;
     position: absolute;
-    top: -285px;
-    right: -440px;
+    bottom: 2.3rem;
+    left: 39rem;
 }
 .nav-top-left{
     display: flex;
-    height: 450px;
+    height: 28.1rem;
 }
 
 .nav .nav-top-left h1{
     color: #13183F;
     position: absolute;
     font-weight: 800;
-    font-size: 56px;
-    line-height: 71px;
+    font-size: 3.5rem;
+    line-height: 4.4rem;
 }
 
 .nav .nav-top-left p{
-    width: 445px;
-    height: 84px;
-    top: 172px;
+    width: 27.8rem;
+    height: 5.2rem;
+    top: 10.7rem;
     position: absolute;
     color: #83869A;
     font-weight: 500;
-    size: 18px;
-    line-height: 28px;
+    size: 1.1rem;
+    line-height: 1.7rem;
 }
 .btn-2{
     top: 260px;
@@ -112,7 +123,7 @@ button:active, button:focus{
 }
 starter-code/css/index.css
 .main{
-    position: relative;
+    position: absolute;
     margin-bottom: 30px;
     justify-content: center;
 }
@@ -238,8 +249,10 @@ starter-code/css/index.css
     }
     
     header button{
-        float: right;
-        margin-right: 50px;
+        /* float: right; */
+        position: relative;
+        right: 9rem;
+        margin-right: -50px;
         background: var(--button-1);
     }
     
@@ -306,9 +319,6 @@ starter-code/css/index.css
         white-space: nowrap;
     }
     
-    button:active, button:focus{
-        outline: none;
-    }
     
     .main{
         position: relative;
@@ -416,27 +426,32 @@ starter-code/css/index.css
 }
 
 /* Mobile view */
-@media screen and (max-width:480px) {
+@media only screen and (max-width:480px) {
     body{
-       overflow-x: hidden;
+        /* display: block; */
+        overflow-x: hidden;
     }
     .container{
-        overflow-x: hidden;
-        width: 480px;
+        width: 375px;
+        /* margin: 20px auto; */
+        display: block;
+        /* position: relative; */
+        /* flex-direction: column-reverse; */
     }
     
     header{
         position: absolute;
-        width: 343px;
+        width: 90%;
         height: 48px;
-        left: 5px;
+        left: 10px;
         top: 16px;
         bottom: 25px;
     }
     
     header button{
-        float: right;
-        margin-right: 0;
+        width: 140px;
+        height: 48px;
+        left: 203px;
         background: var(--button-1);
     }
     
@@ -447,7 +462,6 @@ starter-code/css/index.css
     }
     
     .nav .nav-top-right{
-        position: absolute;
         width: 340px;
         height: 230px;
         display: flex;
@@ -457,8 +471,8 @@ starter-code/css/index.css
         height: 301px;
         width: 327px;
         position: absolute;
-        top: 330px;
-        left: 50px;
+        top: 433px;
+        left: -20px;
     }
     .nav-top-left{
         width: 343px;
@@ -469,18 +483,18 @@ starter-code/css/index.css
         color: #13183F;
         position: absolute;
         font-weight: 800;
-        font-size: 37px;
+        font-size: 40px;
         line-height: 50px;
     }
     
     .nav .nav-top-left p{
         width: 343px;
         height: 78px;
-        top: 115px;
+        top: 120px;
         position: absolute;
         color: #83869A;
         font-weight: 500;
-        font-size: 18px;
+        size: 16px;
         line-height: 26px;
     }
     .btn-2{
@@ -497,35 +511,48 @@ starter-code/css/index.css
         display: inline-block;
         font-size: 0.8rem;
         border-radius: 100px;
+        white-space: nowrap;
+    }
+    
+    button:active, button:focus{
+        outline: none;
     }
     
     .main{
-        position: relative;
-        margin-bottom: 30px;
-        justify-content: center;
+        position: absolute;
+        margin-bottom: 40px;
     }
-
+    
     .cardholder{
         width: 378px;
         height: 1695px;
         position: absolute;
         display: flex;
         flex-direction: column;
-        top: 800px;   
+        top: 800px;
+        
     }
-    
+    .first .mobile{
+        width: 343px;
+        height: 120px;
+        position: absolute;
+        left: 16px;
+        /* justify-content: center; */
+        /* align-items: center; */
+        border-radius: 5%;
+        box-shadow: 0px 5px 15px -10px #000;
+    }
     .cards{
         width: 343px;
-        /* height: 283px; */
+        height: 283px;
         left: 16px;
         justify-content: center;
         align-items: center;
         border-radius: 5%;
-        box-shadow: 0px 5px 12px -9px #000;
+        box-shadow: 0px 5px 15px -10px #000;
     }
     
     .first{
-        height: 100px;
         color: #ffffff;
         background: var(--gradient-1);
     }
@@ -537,6 +564,10 @@ starter-code/css/index.css
         line-height: 32px;
     }
     
+    /* .top{
+        margin-bottom: 30px;
+    } */
+    
     .cards .icon{
         position: absolute;
         top: -15px;
@@ -546,10 +577,9 @@ starter-code/css/index.css
     .cards h2{
         color: #13183F;
         position: absolute;
-        left: 20px;
         font-size: 20px;
         line-height: 25px;
-        top: 50px;
+        left: 23px;
     }
 
     .cards p{
@@ -562,9 +592,8 @@ starter-code/css/index.css
     
     .cards a{
         position: absolute;
-        color: #f74780;
         top: 200px;
-        left: 20px;
+        color: #f74780;
     }
     
     .footer{
@@ -587,11 +616,12 @@ starter-code/css/index.css
     
     .footer img{
         margin-left: -50px;
+        /* padding-left: 10px; */
         font-size: 0.5rem;
     }
     
     .footer button{
-        margin-right: 30px;
+        margin-right: 10px;
         padding-right: 25px;
         background: var(--gradient-2);
     }
