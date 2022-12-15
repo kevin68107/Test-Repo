@@ -143,6 +143,7 @@ starter-code/css/index.css
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: #FFFFFF;
     margin: 15px;
     padding: 0px 10PX;
     border-radius: 15px;
@@ -193,6 +194,7 @@ starter-code/css/index.css
     color: #f74780;
     left: 20px;
     top: 250px;
+    font-weight: bold;
 }
 
 .cards a:hover{
